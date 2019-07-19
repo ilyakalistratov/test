@@ -1,2 +1,3 @@
 123
 next 1234
+new string
