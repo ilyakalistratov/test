@@ -3,3 +3,4 @@ next 1234
 new string
 string 4
 string 5
+string 6 
