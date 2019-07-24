@@ -31,7 +31,6 @@ button.addEventListener('click', ()=> {
 			  div.append(p1);
             });
           }
-	} )
-   
+	} ) 
 
 })
