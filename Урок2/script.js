@@ -1,6 +1,6 @@
 
-const result = document.querySelector('.block2');
-const button = document.getElementById('btn')
+const result = document.querySelector('.article-section');
+const button = document.querySelector('.request-section__btn')
 button.addEventListener('click', () => {
 	const date = new Date();
 	const formattedDate = date.toLocaleDateString('en-GB', {
@@ -17,22 +17,33 @@ button.addEventListener('click', () => {
 		} else {
 			result.innerHTML = '';
 			item.map((item) => {
-				const div = document.createElement('div');
+				const a = document.createElement('a');
+				a.href = item.url;
+				a.target = '_blank';
+				result.append(a);
+
+				const div = document.createElement('article');
 				div.classList.add('article')
-				result.append(div);
+				a.append(div);
 
 				const p1 = document.createElement('p');
-				p1.classList.add('author');
-				p1.textContent = item.author;
+				p1.classList.add('article__author');
+				p1.innerHTML = item.author;
 
 				const p2 = document.createElement('p');
-				p2.classList.add('content')
-				p2.textContent = item.content;
+				p2.classList.add('article__content')
+				p2.innerHTML = item.content;
+
+				const p3 = document.createElement('p');
+				p3.classList.add('article__title')
+				p3.innerHTML = item.title;
 
 				const img = document.createElement('img');
+				img.classList.add('article__img')
 				img.src = item.urlToImage;
 
 				div.append(img);
+				div.append(p3);
 				div.append(p2);
 				div.append(p1);
 			});
