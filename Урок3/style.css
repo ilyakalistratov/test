@@ -61,7 +61,7 @@ body {
 	border-bottom: 3px solid red;
     position: absolute;
     content: "";
-    width: 65px;
+    width: 63px;
     height: 50%;
     transform: rotate(-9deg);
 }
@@ -110,5 +110,14 @@ body {
 	.product-item__img {
 		
 	}
+	.product-item__title  {
+		font-size: 16px;
+	}
 	
+	.product-item__price__old{
+		display: block;
+	}
+	.product-item__price__old:before {
+		top: 7px;
+	}
 }	
