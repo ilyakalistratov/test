@@ -125,19 +125,23 @@ const make = () => {
 		img.src = item.img;
 		card.append(img);
 
+		const content = document.createElement('div');
+		content.classList.add('product-item_content');
+		card.append(content);
+
 		const title = document.createElement('p');
 		title.classList.add('product-item__title');
 		title.textContent = item.title;
-		card.append(title);
+		content.append(title);
 
 		const description = document.createElement('p');
 		description.classList.add('product-item__description');
 		description.textContent = item.description;
-		card.append(description);
+		content.append(description);
 
 		const price = document.createElement('div');
 		price.classList.add('product-item__price');
-		card.append(price);
+		content.append(price);
 
 		const newPrice = document.createElement('p');
 		newPrice.classList.add('product-item__price__new');
@@ -154,15 +158,15 @@ const make = () => {
 		if (item.availability) {
 			availability.classList.add('product-item__available')
 			availability.textContent = 'Есть в наличии';
-			card.append(availability);
+			content.append(availability);
 
 			btn.classList.add('product-item__btn');
 			btn.textContent='В корзину';
-			card.append(btn);
+			content.append(btn);
 		} else {
 			availability.classList.add('product-item__notAvailable')
 			availability.textContent = 'Нет в наличии';
-			card.append(availability);
+			content.append(availability);
 		}
 		
 		
