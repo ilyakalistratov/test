@@ -46,6 +46,7 @@ body {
 }
 .product-item__price{
 	margin-bottom: 5px;
+	position: relative;
 }
 
 .product-item__price__new {
@@ -55,7 +56,14 @@ body {
 .product-item__price__old {
 	display: inline;
 	margin-left: 5px;
-	color: #f52415;
+	}
+.product-item__price__old:before {
+	border-bottom: 3px solid red;
+    position: absolute;
+    content: "";
+    width: 65px;
+    height: 50%;
+    transform: rotate(-9deg);
 }
 .product-item__available {
 	color: #45a14a;

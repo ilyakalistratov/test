@@ -10,7 +10,7 @@ availability: true
 img: './img/almo.jpg',
 description: 'Сухой корм для котят с курицей',
 price: '1100',
-oldPrice: '1299',
+oldPrice: '',
 availability: true
 },
 {title: 'Felix',
@@ -148,11 +148,13 @@ const make = () => {
 		newPrice.textContent = item.price + ' РУБ';
 		price.append(newPrice);
 
-		const oldPrice = document.createElement('del');
+		if (item.oldPrice) {
+		const oldPrice = document.createElement('p');
 		oldPrice.classList.add('product-item__price__old');
-		oldPrice.textContent = item.oldPrice ? item.oldPrice + ' РУБ': null;
+		oldPrice.textContent = item.oldPrice + ' РУБ';
 		price.append(oldPrice);
-
+		}
+		
 		const availability = document.createElement('p')
 		const btn = document.createElement('button')
 		if (item.availability) {
