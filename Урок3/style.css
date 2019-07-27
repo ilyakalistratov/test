@@ -31,7 +31,7 @@ body {
 	max-height: 250px;	
 	margin-bottom: 20px;
 }
-.product-item_content {
+.product-item__content {
 	width: 95%;
 	text-align: center;
 }
@@ -94,7 +94,7 @@ body {
 		grid-template-columns: 45% 45%;
 		
 	} 
-	.product-item_content {
+	.product-item__content {
 		display: grid;
 		justify-items: center;
 		align-content: center;

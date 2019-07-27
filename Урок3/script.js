@@ -126,7 +126,7 @@ const make = () => {
 		card.append(img);
 
 		const content = document.createElement('div');
-		content.classList.add('product-item_content');
+		content.classList.add('product-item__content');
 		card.append(content);
 
 		const title = document.createElement('p');
@@ -150,7 +150,7 @@ const make = () => {
 
 		const oldPrice = document.createElement('del');
 		oldPrice.classList.add('product-item__price__old');
-		oldPrice.textContent = item.oldPrice + ' РУБ';
+		oldPrice.textContent = item.oldPrice ? item.oldPrice + ' РУБ': null;
 		price.append(oldPrice);
 
 		const availability = document.createElement('p')
