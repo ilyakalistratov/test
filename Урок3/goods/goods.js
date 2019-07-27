@@ -1,0 +1,117 @@
+function goods ()  {
+	return ( [
+{title: 'Royal Canin',
+img: '/img.royal.jpg',
+description: 'Для котят от 4 до 12 мес.',
+price: '1300',
+oldPrice: '1499',
+availability: 'Есть в наличии'
+},
+{title: 'Almo Nature',
+img: '',
+description: 'Сухой корм для котят с курицей',
+price: '1100',
+oldPrice: '1299',
+availability: 'Есть в наличии'
+},
+{title: 'Felix',
+img: '',
+description: 'Для красоты шерсти и здоровья кожи, с лососем',
+price: '1750',
+oldPrice: '1900',
+availability: 'Есть в наличии'
+},
+{title: 'Whiskas',
+img: '',
+description: 'Для взрослых кошек',
+price: '999',
+oldPrice: '1300',
+availability: 'Есть в наличии'
+},
+{title: 'Almo Nature',
+img: '',
+description: 'Для поддержания органов чувств для взрослых кошек, с лососем',
+price: '1800',
+oldPrice: '',
+availability: 'Есть в наличии'
+},
+{title: 'Felix',
+img: '',
+description: 'Для взрослых кошек',
+price: '750',
+oldPrice: '800',
+availability: 'Есть в наличии'
+},
+{title: 'Royal Canin',
+img: '',
+description: 'Для длинношерстных кошек (1-7 лет)',
+price: '1299',
+oldPrice: '',
+availability: 'Есть в наличии'
+},
+{title: 'Whiskas',
+img: '',
+description: 'Для взрослых кошек "Идеальный вес" с курицей',
+price: '1750',
+oldPrice: '1900',
+availability: 'Есть в наличии'
+},
+{title: 'Felix',
+img: '',
+description: 'Для поддержания органов чувств для взрослых кошек, с лососем',
+price: '1499',
+oldPrice: '1300',
+availability: 'Есть в наличии'
+},
+{title: 'Royal Canin',
+img: '',
+description: 'Для домашних кошек',
+price: '1400',
+oldPrice: '1500',
+availability: 'Есть в наличии'
+},
+{title: 'Almo Nature',
+img: '',
+description: 'Для красоты шерсти и здоровья кожи, с лососем',
+price: '1299',
+oldPrice: '',
+availability: 'Есть в наличии'
+},
+{title: 'Felix',
+img: '',
+description: 'Для взрослых кошек, c курицей',
+price: '1700',
+oldPrice: '1900',
+availability: 'Есть в наличии'
+},
+{title: 'Royal Canin',
+img: '',
+description: 'Для красоты шерсти и здоровья кожи, с лососем',
+price: '1200',
+oldPrice: '1100',
+availability: 'Есть в наличии'
+},
+{title: 'Whiskas',
+img: '',
+description: 'Для взрослых кошек "Идеальный вес" с курицей',
+price: '1399',
+oldPrice: '1500',
+availability: 'Есть в наличии'
+},
+{title: 'Felix',
+img: '',
+description: 'Для поддержания органов чувств для взрослых кошек, с лососем',
+price: '1899',
+oldPrice: '2000',
+availability: 'Есть в наличии'
+},
+{title: 'Whiskas',
+img: '',
+description: 'Для взрослых кошек',
+price: '1599',
+oldPrice: '',
+availability: 'Есть в наличии'
+}
+])
+export default goods;
+
