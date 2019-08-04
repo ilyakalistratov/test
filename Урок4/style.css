@@ -1,0 +1,27 @@
+.navbar img {
+    height: 70px;
+}
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.col-7 {
+    margin: 150px 25px;
+}
+
+h2:after {
+    content: "";
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	padding-top: 20px;
+	border-bottom: 3px solid  #17a2b8;
+}
+
+.about_us,
+.wi-do {
+    background-color: #e6e3e3;
+} 
+.card img {
+    object-fit: contain;
+}
