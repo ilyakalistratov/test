@@ -1,16 +1,16 @@
 import React from 'react';
 
 const TaskView = (props) => {
-    return (
-            <div>
-                  <ul>
-                {props.items.map(item=> {
-                    return (
-                        <li>{item}</li>
-                    )
-                })}
-                </ul>
-            </div>
-        )    
+	return (
+		<div>
+			<ul>
+				{props.tasks.map(item => {
+					return (
+						<li>{item}</li>
+					)
+				})}
+			</ul>
+		</div>
+	)
 }
- export default TaskView;
+export default TaskView;
