@@ -12,3 +12,14 @@ li {
 .taskForm {
   padding: 10px 20px 20px 20px;
 }
+.tasks_list_form {
+  display: inline;
+}
+.tasks_list_item {
+  display: inline;
+  margin-left: 10px;
+}
+.tasks_list_button {
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
