@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Task.module.css';
 
-const TaskView = (props) => {
-
+const ViewTask = (props) => {
+  let removeTask = props.removeTask;
   return (
 
     <div className='tasks_list'>
@@ -10,11 +10,11 @@ const TaskView = (props) => {
         {props.tasks.map(item => {
           return (
             <>
-              <div>
+              <div key={item.id}>
                 <form className={s.tasks_list_form}>
-                  <button className={s.tasks_list_button}>-</button>
+                  <button className={s.tasks_list_button} onClick={removeTask(item.id)}>-</button>
                 </form>
-                <li className={s.tasks_list_item}>{item}</li>
+                <li className={s.tasks_list_item}>{item.text}</li>
                 <hr />
               </div>
             </>
@@ -26,4 +26,4 @@ const TaskView = (props) => {
 
   )
 }
-export default TaskView;
+export default ViewTask;

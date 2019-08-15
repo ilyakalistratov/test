@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Task.module.css';
 
-class TaskAdd extends React.Component {
+class AddTask extends React.Component {
 
 
   render() {
@@ -15,4 +15,4 @@ class TaskAdd extends React.Component {
     )
   }
 }
-export default TaskAdd;
+export default AddTask;
