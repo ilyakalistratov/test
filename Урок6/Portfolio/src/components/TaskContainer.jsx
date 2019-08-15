@@ -17,8 +17,10 @@ class TaskContainer extends React.Component {
     e.preventDefault();
     let { tasks } = this.state;
     let newTask = { id: uniqueId(), text: this.state.item };
-    this.setState({ tasks: [newTask, ...tasks] });
-    this.setState({ item: '' });
+    this.setState({
+      tasks: [newTask, ...tasks],
+      item: ''
+    });
   }
   removeTask = (id) => (e) => {
     e.preventDefault();
