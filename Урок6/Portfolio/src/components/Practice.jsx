@@ -2,7 +2,8 @@ import React from 'react';
 import { Layout, Row, Col, Card } from 'antd';
 import laptop from './img/laptop.svg';
 import html5 from './img/html5.svg';
-import js from './img/js.svg'
+import js from './img/js.svg';
+import QueueAnim from 'rc-queue-anim';
 
 const { Meta } = Card;
 
@@ -16,6 +17,7 @@ class Practice extends React.Component {
             <h2 style={{ textAlign: 'center', fontSize: '32px', color: '#000', margin: '20px 0' }}>Опыт разработки</h2>
           </Col>
         </Row>
+
         <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
           <Col style={{ marginBottom: '10px' }}>
             <Card
@@ -45,9 +47,7 @@ class Practice extends React.Component {
             </Card>
           </Col>
         </Row>
-
       </Layout>
-
     )
   }
 }

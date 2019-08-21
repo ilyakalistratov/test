@@ -5,6 +5,7 @@ import AboutMe from './components/AboutMe';
 import Practice from './components/Practice';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Examples from './components/Examples';
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Practice />
       <Skills />
       <Experience />
+      <Examples />
    </>
   );
 }
