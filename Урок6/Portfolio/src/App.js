@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import HeaderBlock from './components/Header';
-import AboutMe from './components/AboutMe';
-import Practice from './components/Practice';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Examples from './components/Examples';
+import HeaderBlock from './components/PageSections/Header';
+import AboutMe from './components/PageSections/AboutMe';
+import Practice from './components/PageSections/Practice';
+import Skills from './components/PageSections/Skills';
+import Experience from './components/PageSections/Experience';
+import Examples from './components/PageSections/Examples';
 
 
 
