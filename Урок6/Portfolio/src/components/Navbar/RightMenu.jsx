@@ -21,6 +21,9 @@ class LeftMenu extends Component {
         <Menu.Item key="Experience">
           <a href="#Experience">Резюме</a>
         </Menu.Item>
+        <Menu.Item key="Examples">
+          <a href="">Примеры</a>
+        </Menu.Item>
         <Menu.Item key="Contacts">
           <a href="">Контакты</a>
         </Menu.Item>
