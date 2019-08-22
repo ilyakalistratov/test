@@ -9,7 +9,8 @@ const Weather = (props) => {
 
   let nameRef = useRef();
 
-  const sumbitButton = () => {
+  const sumbitButton = (e) => {
+    e.preventDefault();
     setState(nameRef.current.value);
   }
 
@@ -21,21 +22,24 @@ const Weather = (props) => {
   }, [city]);
 
   return (
-    <div style={{ marginBottom: '30px', border: '1px solid #d2d2d2', padding: 20 }}>
+    <div style={{ marginBottom: '30px' }}>
       <h2><i>Weather </i></h2>
-      <Form >
+      <Form onSubmit={sumbitButton} >
         <Form.Item >
-          <input type="text" ref={nameRef} placeholder='example Moscow,ru...' style={{ width: '100%' }} />
+          <input type="text" ref={nameRef} placeholder=' example Moscow,ru...' style={{ width: '100%', border: '1px solid #d2d2d2', borderRadius: 5 }} />
         </Form.Item>
         <Form.Item >
-          <Button type="primary" htmlType="submit" onClick={sumbitButton}>Узнать погоду</Button>
+          <Button type="primary" htmlType="submit" >Show weather..</Button>
         </Form.Item>
       </Form>
       <Row>
         <Col>
+          {weatherdata.cod == 404 ? <p>{weatherdata.message}</p> : null}
           {!weatherdata.main ? null :
             <>
-              <p>{weatherdata.name}, {weatherdata.sys.country} <img alt='img' src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`} /> </p>
+              <p>{weatherdata.name}, {weatherdata.sys.country}</p>
+              <p><sub>{(weatherdata.main.temp_min - 273.15).toFixed(1)}  °C</sub><img
+                alt='img' src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`} /><sub>{(weatherdata.main.temp_max - 273.15).toFixed(1)}  °C</sub> </p>
               <p>t: {(weatherdata.main.temp - 273.15).toFixed(1)} °C </p>
               <p>wind: {weatherdata.wind.speed} m/s </p>
               <p>humidity : {weatherdata.main.humidity} % </p>

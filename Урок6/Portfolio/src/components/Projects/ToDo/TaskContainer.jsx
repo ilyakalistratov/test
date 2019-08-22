@@ -30,7 +30,7 @@ class TaskContainer extends React.Component {
 
   render() {
     return (
-      <div style={{ marginBottom: '30px', border: '1px solid #d2d2d2', padding: 20 }}>
+      <div style={{ marginBottom: '30px' }}>
         <h2><i>ToDO (список задач)</i></h2>
         <AddTask addItemValue={this.addItemValue} itemValue={this.state.item} addTask={this.addTask} />
         <ViewTask tasks={this.state.tasks} removeTask={this.removeTask} />

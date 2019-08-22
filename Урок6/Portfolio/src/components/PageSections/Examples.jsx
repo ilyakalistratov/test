@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout, Row, Col, Card } from 'antd';
 import TaskContainer from './../Projects/ToDo/TaskContainer';
 import ConvertContainer from './../Projects/Converter/ConvertContainer'
 import Weather from '../Projects/Weather/Weather';
@@ -17,10 +17,14 @@ class Examples extends React.Component {
         </Row>
         <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
           <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-            <TaskContainer />
+            <Card>
+              <TaskContainer />
+            </Card>
           </Col>
           <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-            <ConvertContainer />
+            <Card>
+              <ConvertContainer />
+            </Card>
           </Col>
         </Row>
         <Row type="flex" justify="center">
@@ -28,7 +32,9 @@ class Examples extends React.Component {
         </Row>
         <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
           <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-            <Weather />
+            <Card>
+              <Weather />
+            </Card>
           </Col>
           <Col xs={{ span: 24 }} lg={{ span: 8 }}>
           </Col>
