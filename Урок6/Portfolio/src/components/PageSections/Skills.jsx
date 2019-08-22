@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col, Card, Progress } from 'antd';
+import { Layout, Row, Col, Progress } from 'antd';
 
 
 class Skills extends React.Component {
@@ -7,7 +7,7 @@ class Skills extends React.Component {
   render() {
     return (
       <Layout id='Skills' style={{
-        background: '#f5f5f5'
+        background: '#fafafa'
       }}>
         <Row>
           <Col>

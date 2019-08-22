@@ -3,7 +3,7 @@ import ConvertToRuble from './ConvertToRuble';
 import ConvertToDollar from './ConvertToDollar';
 
 const convert = (sum, currency) => {
-  if (Number.isNaN(sum) || sum == '') {
+  if (Number.isNaN(sum) || sum === '') {
     return '';
   } else if (currency === 'r') {
     return (65.83 * sum).toFixed(2)

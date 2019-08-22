@@ -24,7 +24,7 @@ class TaskContainer extends React.Component {
   removeTask = (id) => (e) => {
     e.preventDefault();
     let { tasks } = this.state;
-    let filtered = tasks.filter(item => item.id != id)
+    let filtered = tasks.filter(item => item.id !== id)
     this.setState({ tasks: filtered })
   }
 

@@ -6,7 +6,7 @@ class AboutMe extends React.Component {
   render() {
 
     return (
-      <Layout id='About_me' style={{ background: '#f5f5f5' }}>
+      <Layout id='About_me' style={{ background: '#fafafa' }}>
         <Row>
           <Col>
             <h2 style={{ textAlign: 'center', fontSize: '32px', color: '#000', margin: '20px 0' }}>Обо мне</h2>
