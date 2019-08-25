@@ -3,6 +3,7 @@ import { Layout, Row, Col, Card } from 'antd';
 import TaskContainer from './../Projects/ToDo/TaskContainer';
 import ConvertContainer from './../Projects/Converter/ConvertContainer'
 import Weather from '../Projects/Weather/Weather';
+import NewsContainer from '../Projects/News/NewsContainer';
 
 
 class Examples extends React.Component {
@@ -37,6 +38,9 @@ class Examples extends React.Component {
             </Card>
           </Col>
           <Col xs={{ span: 24 }} lg={{ span: 8 }}>
+            <Card>
+              <NewsContainer />
+            </Card>
           </Col>
         </Row>
       </Layout>

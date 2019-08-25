@@ -16,9 +16,10 @@ const Weather = (props) => {
 
   useEffect(() => {
     const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=03ee1c895fca203c761865f3ae7c96a6`;
-    fetch(URL).then(response => response.json()).then(data => {
-      setWeather(data);
-    });
+    fetch(URL)
+      .then(response => response.json())
+      .then(data => { setWeather(data) })
+      .catch(error => error);
   }, [city]);
 
   return (

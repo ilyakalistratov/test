@@ -6,6 +6,7 @@ import Practice from './components/PageSections/Practice';
 import Skills from './components/PageSections/Skills';
 import Experience from './components/PageSections/Experience';
 import Examples from './components/PageSections/Examples';
+import Contacts from './components/PageSections/Contacts';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Skills />
       <Experience />
       <Examples />
+      <Contacts />
    </>
   );
 }
