@@ -12,7 +12,7 @@ class Contacts extends React.Component {
             <a href="mailto:ilya.kalistatoff@mail.ru" className='contacts_iconMail' ><Icon type="mail" /></a>
           </Col>
         </Row>
-        <Row Row type="flex" justify="center">
+        <Row type="flex" justify="center">
           <Col>
             <p style={{ color: '#939598', fontSize: '16px' }}>© 2019 Ilya Kalistratov</p>
           </Col>

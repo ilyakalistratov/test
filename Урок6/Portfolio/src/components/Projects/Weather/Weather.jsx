@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Form, Button, Row, Col } from 'antd';
+import { Form, Button, Row } from 'antd';
+import ViewWeather from './ViewWeather';
 
 
 
@@ -15,7 +16,7 @@ const Weather = (props) => {
   }
 
   useEffect(() => {
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=03ee1c895fca203c761865f3ae7c96a6`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=03ee1c895fca203c761865f3ae7c96a6`;
     fetch(URL)
       .then(response => response.json())
       .then(data => { setWeather(data) })
@@ -34,20 +35,7 @@ const Weather = (props) => {
         </Form.Item>
       </Form>
       <Row>
-        <Col>
-          {weatherdata.cod == 404 ? <p>{weatherdata.message}</p> : null}
-          {!weatherdata.main ? null :
-            <>
-              <p>{weatherdata.name}, {weatherdata.sys.country}</p>
-              <p><sub>{(weatherdata.main.temp_min - 273.15).toFixed(1)}  °C</sub><img
-                alt='img' src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`} /><sub>{(weatherdata.main.temp_max - 273.15).toFixed(1)}  °C</sub> </p>
-              <p>t: {(weatherdata.main.temp - 273.15).toFixed(1)} °C </p>
-              <p>wind: {weatherdata.wind.speed} m/s </p>
-              <p>humidity : {weatherdata.main.humidity} % </p>
-              <p>clouds : {weatherdata.clouds.all} % </p>
-            </>
-          }
-        </Col>
+        <ViewWeather weatherdata={weatherdata} />
       </Row>
     </div>
 
