@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'antd';
 
-class LeftMenu extends Component {
+class RightMenu extends Component {
   render() {
     return (
       <Menu>
@@ -30,4 +30,4 @@ class LeftMenu extends Component {
     );
   }
 }
-export default LeftMenu;
+export default RightMenu;

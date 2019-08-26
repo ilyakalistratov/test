@@ -12,7 +12,7 @@ class ViewWeather extends React.Component {
           <>
             <p>{weatherdata.name}, {weatherdata.sys.country}</p>
             <p><sub>{(weatherdata.main.temp_min - 273.15).toFixed(1)}  °C</sub><img
-              alt='img' src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`} /><sub>{(weatherdata.main.temp_max - 273.15).toFixed(1)}  °C</sub> </p>
+              alt='img' src={`https://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`} /><sub>{(weatherdata.main.temp_max - 273.15).toFixed(1)}  °C</sub> </p>
             <p>t: {(weatherdata.main.temp - 273.15).toFixed(1)} °C </p>
             <p>wind: {weatherdata.wind.speed} m/s </p>
             <p>humidity : {weatherdata.main.humidity} % </p>

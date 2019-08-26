@@ -27,7 +27,6 @@ class Navbar extends Component {
             <Drawer
               title="MENU"
               placement="right"
-              closable={false}
               onClose={this.onClose}
               visible={this.state.visible}>
               <RightMenu />

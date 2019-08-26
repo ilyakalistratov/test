@@ -14,7 +14,7 @@ class LoadingWeatherBg extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      bgUrl: 'https://s131vla.storage.yandex.net/rdisk/ba984b4930f0904f5cb9f44929a1c52942b1596f75200ba80410f5e862d5209b/5d62bdbc/qIXoc3N2Z8fglz2parGVywBr7hupNa_SK9GBi8LLH-yKHFx7sC6Jot3ixnwCiZbpSYGT9CBdinT2DD2XAqwfNQ==?uid=0&filename=bfoto_ru_4761.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&fsize=15693887&hid=cffd12b3cb77e57fc10130e1b9e13de0&media_type=image&tknv=v2&etag=e7e83cefebc1116149f45039e454f63d&rtoken=GupbO38VEK8v&force_default=no&ycrid=na-8b31bbc800bfc09da9ae9eb0fa7c0aa6-downloader2h&ts=590f3eb9de700&s=8cac589d2f461b5d1eb3d2e50b24d34bd6e607583e157c7ef03be353c5dddd74&pb=U2FsdGVkX1_oUGYiVVHqBkot0pCuuzFUroPVlvzYt_oE4FMTmHcVqFADVeNfzDzpTe0DbCwK5FGQE5y8PqGbJ3OigU3wDHQQ79kN_6AMaUw',
+      bgUrl: 'https://i.ibb.co/KGH9c94/bfoto-ru-4761.jpg',
       url: '',
       latitude: '',
       longitude: '',
