@@ -14,20 +14,16 @@ class LoadingWeatherBg extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      bgUrl: 'https://i.ibb.co/KGH9c94/bfoto-ru-4761.jpg',
+      bgUrl: 'https://static.wixstatic.com/media/632d61_b320d16fef074274b7700f95d68ab6ee~mv2_d_6016_4016_s_4_2.jpg?dn=',
       url: '',
       latitude: '',
       longitude: '',
       weatherdata: {},
     }
   }
-  async componentDidMount() {
-    try {
-      await this.bgImgLoad(this.state.bgUrl);
-      await this.getCurrentLocation();
-    } catch (e) {
-      this.setState({ loading: false })
-    }
+  componentDidMount() {
+    this.bgImgLoad(this.state.bgUrl);
+    this.getCurrentLocation();
   }
 
   getCurrentLocation() {
@@ -58,7 +54,7 @@ class LoadingWeatherBg extends React.Component {
         let objectURL = URL.createObjectURL(blob);
         this.setState({ loading: false, url: objectURL })
       })
-      .catch(error => error);
+      .catch(error => this.setState({ loading: false }));
   }
 
 
@@ -68,7 +64,7 @@ class LoadingWeatherBg extends React.Component {
         <Row>
           <Col><h2><i>LoadingWeatherBg</i></h2></Col>
         </Row>
-        <Row type="flex" style={{ background: `url(${this.state.url}) no-repeat` }}>
+        <Row type="flex" style={{ background: `url(${this.state.url}) no-repeat`, backgroundSize: 'cover' }}>
           {this.state.loading ? <Col><Loading /></Col> :
             <Col>
               <ViewWeather weatherdata={this.state.weatherdata} />
