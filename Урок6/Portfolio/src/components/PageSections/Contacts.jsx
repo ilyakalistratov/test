@@ -5,7 +5,7 @@ class Contacts extends React.Component {
 
   render() {
     return (
-      <Layout id='Contacts' style={{ background: '#333333' }}>
+      <Layout id='Contacts' style={{ background: '#222222' }}>
         <Row type="flex" justify="center">
           <Col style={{ padding: 30, fontSize: '16px', }}>
             <a href="https://github.com/ilyakalistratov/test" target="_blank" className='contacts_iconGit'><Icon type="github" /></a>

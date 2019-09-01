@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Menu } from 'antd';
+import { inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 
+@inject("store")
+@observer
 class RightMenu extends Component {
   render() {
+    const { theme } = this.props.store
+
     return (
-      <Menu>
+      <Menu style={{ backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}>
         <Menu.Item key="main">
           <a href="#top_slide">Главная</a>
         </Menu.Item>

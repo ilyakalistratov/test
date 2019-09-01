@@ -1,15 +1,19 @@
 import React from 'react';
 import { Layout, Row, Col } from 'antd';
+import { observer } from 'mobx-react';
+import { inject } from 'mobx-react';
 
+@inject("store")
+@observer
 class AboutMe extends React.Component {
 
   render() {
-
+    const { theme } = this.props.store
     return (
-      <Layout id='About_me' style={{ background: '#fafafa' }}>
+      <Layout id='About_me' style={{ background: `${theme.background2}`, color: `${theme.colorP}` }}>
         <Row>
           <Col>
-            <h2 style={{ textAlign: 'center', fontSize: '32px', color: '#000', margin: '20px 0' }}>Обо мне</h2>
+            <h2 style={{ textAlign: 'center', fontSize: '32px', margin: '20px 0', color: `${theme.colorH}` }}>Обо мне</h2>
           </Col>
         </Row>
         <Row>

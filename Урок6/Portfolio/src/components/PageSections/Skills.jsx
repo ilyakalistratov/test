@@ -1,17 +1,19 @@
 import React from 'react';
 import { Layout, Row, Col, Progress } from 'antd';
+import { observer } from 'mobx-react';
+import { inject } from 'mobx-react';
 
-
+@inject("store")
+@observer
 class Skills extends React.Component {
 
   render() {
+    const { theme } = this.props.store;
     return (
-      <Layout id='Skills' style={{
-        background: '#fafafa'
-      }}>
+      <Layout id='Skills' style={{ backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}>
         <Row>
           <Col>
-            <h2 style={{ textAlign: 'center', fontSize: '32px', color: '#000', margin: '20px 0' }}>Навыки</h2>
+            <h2 style={{ textAlign: 'center', fontSize: '32px', color: `${theme.colorH}`, margin: '20px 0' }}>Навыки</h2>
           </Col>
         </Row>
         <Row type="flex" justify="center" gutter={32} style={{ margin: '20px 0 30px 0' }}>
