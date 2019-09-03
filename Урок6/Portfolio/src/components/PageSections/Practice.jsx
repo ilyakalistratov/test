@@ -11,6 +11,21 @@ const { Meta } = Card;
 @inject("store")
 @observer
 class Practice extends React.Component {
+  state = {
+    practice: [{
+      title: 'PHOTOSHOP',
+      description: 'Photoshop, Adobe Muze',
+      img: laptop
+    }, {
+      title: 'HTML5/CSS3',
+      description: 'Адаптив, респонсив, кроссбраузерность',
+      img: html5
+    }, {
+      title: 'JAVASCRIPT',
+      description: 'С фреймворками и без',
+      img: js
+    }]
+  }
 
   render() {
     const { theme } = this.props.store;
@@ -23,33 +38,20 @@ class Practice extends React.Component {
         </Row>
 
         <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
-          <Col style={{ marginBottom: '10px' }}>
-            <Card
-              hoverable
-              style={{ width: 240, padding: '20px', backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}
-              cover={<img alt="example" src={laptop} />}
-            >
-              <Meta title={<span style={{ color: `${theme.colorH}` }}>PHOTOSHOP</span>} description={<span style={{ color: `${theme.colorP}` }}>Photoshop, Adobe Muze</span>} />
-            </Card>
-          </Col>
-          <Col style={{ marginBottom: '10px' }}>
-            <Card
-              hoverable
-              style={{ width: 240, padding: '20px', backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}
-              cover={<img alt="example" src={html5} />}
-            >
-              <Meta title={<span style={{ color: `${theme.colorH}` }}>HTML5/CSS3"</span>} description={<span style={{ color: `${theme.colorP}` }}>Адаптив, респонсив, кроссбраузерность</span>} />
-            </Card>
-          </Col>
-          <Col style={{ marginBottom: '10px' }}>
-            <Card
-              hoverable
-              style={{ width: 240, padding: '20px', backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}
-              cover={<img alt="example" src={js} />}
-            >
-              <Meta title={<span style={{ color: `${theme.colorH}` }}>JAVASCRIPT</span>} description={<span style={{ color: `${theme.colorP}` }}>С фреймворками и без</span>} />
-            </Card>
-          </Col>
+          {this.state.practice.map(item => {
+            return (
+              <Col style={{ marginBottom: '10px' }}>
+                <Card
+                  hoverable
+                  style={{ width: 240, padding: '20px', backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}
+                  cover={<img alt="example" src={item.img} />}
+                >
+                  <Meta title={<span style={{ color: `${theme.colorH}` }}>{item.title}</span>} description={<span style={{ color: `${theme.colorP}` }}>{item.description}</span>} />
+                </Card>
+              </Col>
+            )
+          })}
+
         </Row>
       </Layout>
     )
