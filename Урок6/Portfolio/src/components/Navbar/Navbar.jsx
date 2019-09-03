@@ -41,6 +41,7 @@ import { inject } from 'mobx-react';
               visible={this.state.visible}
               theme='dark'
               bodyStyle={{ backgroundColor: `${theme.background2}`, color: `${theme.colorH}` }}
+              className='navbar_drawer'
 
             >
 

@@ -6,6 +6,41 @@ import { inject } from 'mobx-react';
 @inject("store")
 @observer
 class Skills extends React.Component {
+  state = {
+    skills: [{
+      title: 'HTML5',
+      percent: '85',
+      strokeColor: {
+        '0%': '#108ee9',
+        '100%': '#87d068',
+      }
+    }, {
+      title: 'CSS/CSS3',
+      percent: '85',
+      strokeColor: {
+        '0%': '#108ee9',
+        '100%': '#87d068',
+      }
+    }, {
+      title: 'JavaScript',
+      percent: '60',
+    }, {
+      title: 'jQuery',
+      percent: '30',
+    }, {
+      title: 'React',
+      percent: '45',
+    }, {
+      title: 'Redux',
+      percent: '45',
+    }, {
+      title: 'Bootstrap',
+      percent: '30',
+    }, {
+      title: 'Ant Design',
+      percent: '35',
+    },]
+  }
 
   render() {
     const { theme } = this.props.store;
@@ -17,52 +52,17 @@ class Skills extends React.Component {
           </Col>
         </Row>
         <Row type="flex" justify="center" gutter={32} style={{ margin: '20px 0 30px 0' }}>
-          <Col xs={{ span: 11 }} sm={{ span: 11 }} md={{ span: 10 }} lg={{ span: 7 }}>
-            <div>
-              <Progress strokeColor={{
-                '0%': '#108ee9',
-                '100%': '#87d068',
-              }} percent={85} />
-              <p>HTML5</p>
-            </div>
-            <div>
-              <Progress strokeColor={{
-                '0%': '#108ee9',
-                '100%': '#87d068',
-              }} percent={85} />
-              <p>CSS/CSS3</p>
-            </div>
-            <div>
-              <Progress percent={60} />
-              <p>JavaScript</p>
-            </div>
-            <div>
-              <Progress percent={30} />
-              <p>jQuery</p>
-            </div>
-            <div>
-              <Progress percent={45} />
-              <p>React</p>
-            </div>
-            <div>
-              <Progress percent={45} status="active" />
-              <p>Redux</p>
-            </div>
-
-          </Col>
-          <Col xs={{ span: 11 }} sm={{ span: 11 }} md={{ span: 10 }} lg={{ span: 7 }}>
-            <div>
-              <Progress percent={30} />
-              <p>Bootstrap</p>
-            </div>
-            <div>
-              <Progress percent={35} />
-              <p>Ant Design</p>
-            </div>
-            <div>
-              <Progress percent={25} />
-              <p>Photoshop</p>
-            </div>
+          <Col xs={{ span: 19 }} sm={{ span: 17 }} md={{ span: 15 }} lg={{ span: 10 }}>
+            {this.state.skills.map(item => {
+              return (
+                <div>
+                  <Progress
+                    strokeColor={item.strokeColor}
+                    percent={item.percent} />
+                  <p>{item.title}</p>
+                </div>
+              )
+            })}
 
           </Col>
         </Row>
