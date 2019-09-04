@@ -5,20 +5,18 @@ import ConvertContainer from './../Projects/Converter/ConvertContainer'
 import Weather from '../Projects/Weather/Weather';
 import NewsContainer from '../Projects/News/NewsContainer';
 import LoadingWeatherBg from '../Projects/LoadingWeatherBg/LoadingWeatherBg';
-import { observer } from 'mobx-react';
-import { inject } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
 @inject("store")
 @observer
 class Examples extends React.Component {
-
   render() {
     const { theme } = this.props.store;
     return (
-      <Layout id='Examples' style={{ backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}>
+      <Layout id='Examples' style={{ backgroundColor: `${theme.secondSectionBackground}`, color: `${theme.colorParagraph}` }}>
         <Row>
           <Col>
-            <h2 style={{ textAlign: 'center', fontSize: '32px', color: `${theme.colorH}`, margin: '20px 0' }}>Примеры работ</h2>
+            <h2 style={{ textAlign: 'center', fontSize: '32px', color: `${theme.colorHeader}`, margin: '20px 0' }}>Примеры работ</h2>
           </Col>
         </Row>
         <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
@@ -58,11 +56,9 @@ class Examples extends React.Component {
             </Card>
           </Col>
           <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-
           </Col>
         </Row>
       </Layout>
-
     )
   }
 }

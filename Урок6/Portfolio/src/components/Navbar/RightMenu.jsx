@@ -1,39 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Menu } from 'antd';
-import { inject } from 'mobx-react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
-@inject("store")
-@observer
-class RightMenu extends Component {
-  render() {
-    const { theme } = this.props.store
-
-    return (
-      <Menu style={{ backgroundColor: `${theme.background2}`, color: `${theme.colorP}` }}>
-        <Menu.Item key="main">
-          <a href="#top_slide">Главная</a>
-        </Menu.Item>
-        <Menu.Item key="About_me">
-          <a href="#About_me">Обо мне</a>
-        </Menu.Item>
-        <Menu.Item key="Dev_experience">
-          <a href="#Practice">Опыт разработки</a>
-        </Menu.Item>
-        <Menu.Item key="Skills">
-          <a href="#Skills">Навыки</a>
-        </Menu.Item>
-        <Menu.Item key="Experience">
-          <a href="#Experience">Резюме</a>
-        </Menu.Item>
-        <Menu.Item key="Examples">
-          <a href="#Examples">Примеры</a>
-        </Menu.Item>
-        <Menu.Item key="Contacts">
-          <a href="#Contacts">Контакты</a>
-        </Menu.Item>
-      </Menu>
-    );
-  }
-}
+const RightMenu = inject("store")(observer((props) => {
+  const { theme } = props.store;
+  const menu = [{
+    title: 'Главная',
+    href: '#top_slide'
+  }, {
+    title: 'Обо мне',
+    href: '#About_me'
+  }, {
+    title: 'Опыт разработки',
+    href: '#Practice'
+  }, {
+    title: 'Навыки',
+    href: '#Skills'
+  }, {
+    title: 'Резюме',
+    href: '#Experience'
+  }, {
+    title: 'Примеры',
+    href: '#Examples'
+  }, {
+    title: 'Контакты',
+    href: '#Contacts'
+  }]
+  return (
+    <Menu style={{ backgroundColor: `${theme.secondSectionBackground}`, color: `${theme.colorParagraph}` }}>
+      {menu.map((item, index) => {
+        return (
+          <Menu.Item key={index}>
+            <a href={item.href} >{item.title}</a>
+          </Menu.Item>
+        )
+      })}
+    </Menu>
+  );
+}))
 export default RightMenu;

@@ -17,7 +17,14 @@ const ViewTask = (props) => {
             </List.Item>
           )
         })}
-        {tasks.length > 0 ? (tasks.length === 1 ? <List.Item><p>{tasks.length} task</p></List.Item> : <List.Item><p>{tasks.length} tasks</p></List.Item>) : null}
+        {tasks.length && (
+          <List.Item>
+            <p>
+              {tasks.length} task{tasks.length > 1 && 's'}
+            </p>
+          </List.Item>
+        )
+        }
       </List>
     </div>
   )

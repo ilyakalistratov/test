@@ -9,14 +9,9 @@ import Examples from './components/PageSections/Examples';
 import Contacts from './components/PageSections/Contacts';
 import DevTools from 'mobx-react-devtools';
 
-
-
-
 function App() {
-
   return (
-   <>
-  
+   <>  
    <DevTools />
       <HeaderBlock />
       <AboutMe />
@@ -24,10 +19,8 @@ function App() {
       <Skills />
       <Experience />
       <Examples />
-      <Contacts />
-     
+      <Contacts />     
    </>
   );
 }
-
 export default App;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Layout, Row, Col, Icon } from 'antd';
 
 class Contacts extends React.Component {
-
   render() {
     return (
       <Layout id='Contacts' style={{ background: '#222222' }}>
