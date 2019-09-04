@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout, Row, Col } from "antd";
 import Navbar from '../Navbar/Navbar';
-import bg from './../img/bg.jpg';
-import bg2 from './../img/bg2.jpg';
+import bg from '../../img/bg.jpg';
+import bg2 from '../../img/bg2.jpg';
 import Texty from 'rc-texty';
 import { observer, inject } from 'mobx-react';
 

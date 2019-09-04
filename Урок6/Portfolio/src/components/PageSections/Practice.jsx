@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout, Row, Col, Card } from 'antd';
-import laptop from './../img/laptop.svg';
-import html5 from './../img/html5.svg';
-import js from './../img/js.svg';
+import laptop from '../../img/laptop.svg';
+import html5 from '../../img/html5.svg';
+import js from '../../img/js.svg';
 import { observer, inject } from 'mobx-react';
 
 const { Meta } = Card;
