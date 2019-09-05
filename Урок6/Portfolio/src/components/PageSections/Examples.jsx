@@ -6,6 +6,13 @@ import Weather from '../Projects/Weather/Weather';
 import NewsContainer from '../Projects/News/NewsContainer';
 import LoadingWeatherBg from '../Projects/LoadingWeatherBg/LoadingWeatherBg';
 import { observer, inject } from 'mobx-react';
+import WithCardWrapper from '../../hoc/WithCardWrapper';
+
+const TaskContainerInCard = WithCardWrapper(TaskContainer);
+const ConvertContainerInCard = WithCardWrapper(ConvertContainer);
+const WeatherInCard = WithCardWrapper(Weather);
+const NewsContainerInCard = WithCardWrapper(NewsContainer);
+const LoadingWeatherBgInCard = WithCardWrapper(LoadingWeatherBg)
 
 const Examples = inject('store')(observer(props => {
   const { theme } = props.store;
@@ -17,43 +24,21 @@ const Examples = inject('store')(observer(props => {
         </Col>
       </Row>
       <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
-        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-          <Card >
-            <TaskContainer />
-          </Card>
-        </Col>
-        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-          <Card>
-            <ConvertContainer />
-          </Card>
-        </Col>
+        <TaskContainerInCard />
+        <ConvertContainerInCard />
       </Row>
       <Row type="flex" justify="center">
         <Col xs={{ span: 16 }}> <hr /></Col>
       </Row>
       <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
-        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-          <Card>
-            <Weather />
-          </Card>
-        </Col>
-        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-          <Card>
-            <NewsContainer />
-          </Card>
-        </Col>
+        <WeatherInCard />
+        <NewsContainerInCard />
       </Row>
       <Row type="flex" justify="center">
         <Col xs={{ span: 16 }}> <hr /></Col>
       </Row>
       <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
-        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-          <Card>
-            <LoadingWeatherBg />
-          </Card>
-        </Col>
-        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-        </Col>
+        <LoadingWeatherBgInCard />
       </Row>
     </Layout>
   )
