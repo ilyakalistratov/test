@@ -28,7 +28,6 @@ class ConvertContainer extends React.Component {
     const { currency, sum } = this.state;
     const rubble = currency === 'r' ? sum : convert(sum, 'r');
     const dollar = currency === 'd' ? sum : convert(sum, 'd');
-
     return (
       <div style={{ marginBottom: '30px' }}>
         <h2><i>Currency converter (конвертер валют)</i></h2>

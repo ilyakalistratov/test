@@ -8,7 +8,6 @@ const SEARCH_LAT = 'lat=';
 const SEARCH_LON = 'lon=';
 const APPID = 'APPID=03ee1c895fca203c761865f3ae7c96a6';
 
-
 class LoadingWeatherBg extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +20,7 @@ class LoadingWeatherBg extends React.Component {
       weatherdata: {},
     }
   }
+
   componentDidMount() {
     this.bgImgLoad(this.state.bgUrl);
     this.getCurrentLocation();
@@ -56,7 +56,6 @@ class LoadingWeatherBg extends React.Component {
       })
       .catch(error => this.setState({ loading: false }));
   }
-
 
   render() {
     return (

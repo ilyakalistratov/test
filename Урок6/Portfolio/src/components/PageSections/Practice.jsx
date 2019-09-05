@@ -39,8 +39,8 @@ const Practice = inject("store")(observer(props => {
                 cover={<img alt="example" src={item.img} />}
               >
                 <Meta
-                  title={<span style={{ color: `${theme.colorH}` }}>{item.title}</span>}
-                  description={<span style={{ color: `${theme.colorP}` }}>{item.description}</span>} />
+                  title={<span style={{ color: `${theme.colorHeader}` }}>{item.title}</span>}
+                  description={<span style={{ color: `${theme.colorParagraph}` }}>{item.description}</span>} />
               </Card>
             </Col>
           )

@@ -10,7 +10,12 @@ const ViewTask = (props) => {
         {tasks.map(item => {
           return (
             <List.Item key={item.id}>
-              <Button type="primary" style={{ marginRight: 10 }} onClick={removeTask(item.id)}>-</Button>
+              <Button
+                type="primary"
+                style={{ marginRight: 10 }}
+                onClick={removeTask(item.id)}>
+                -
+              </Button>
               <List.Item.Meta
                 description={item.text}
               />

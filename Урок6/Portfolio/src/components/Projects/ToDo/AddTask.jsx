@@ -6,7 +6,12 @@ const AddTask = (props) => {
     <div>
       <Form onSubmit={props.addTask} >
         <Form.Item >
-          <Input type="text" value={props.itemValue} required placeholder='new task...' onChange={props.addItemValue} />
+          <Input
+            type="text"
+            value={props.itemValue}
+            required
+            placeholder='new task...'
+            onChange={props.addItemValue} />
         </Form.Item>
       </Form>
     </div >
