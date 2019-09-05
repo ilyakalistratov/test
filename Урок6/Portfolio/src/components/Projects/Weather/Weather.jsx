@@ -10,7 +10,6 @@ const Weather = (props) => {
     e.preventDefault();
     setState(nameRef.current.value);
   }
-
   useEffect(() => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=03ee1c895fca203c761865f3ae7c96a6`;
     fetch(URL)
@@ -18,7 +17,6 @@ const Weather = (props) => {
       .then(data => { setWeather(data) })
       .catch(error => error);
   }, [city]);
-
   return (
     <div style={{ marginBottom: '30px' }}>
       <h2><i>Weather </i></h2>
