@@ -3,7 +3,7 @@ import AddTask from './AddTask';
 import ViewTask from './ViewTask';
 import { uniqueId } from 'lodash';
 
-class TaskContainer extends React.Component {
+class TaskContainer extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = { tasks: [], item: '' }
