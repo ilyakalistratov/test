@@ -12,7 +12,7 @@ const HeaderBlock = inject('store')(observer(props => {
   const { theme } = props.store;
   const mainText = [{
     title: 'HTML5, CSS3',
-    description: 'CVG, LESS,  анимация'
+    description: 'SVG, LESS,  анимация'
   }, {
     title: 'Bootstrap',
     description: 'адаптивные мобильные web-проекты'

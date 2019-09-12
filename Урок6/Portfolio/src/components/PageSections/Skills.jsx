@@ -49,12 +49,12 @@ const Skills = inject('store')(observer(props => {
       </Row>
       <Row type="flex" justify="center" gutter={32} style={{ margin: '20px 0 30px 0' }}>
         <Col xs={{ span: 19 }} sm={{ span: 17 }} md={{ span: 15 }} lg={{ span: 10 }}>
-          <Plx
-            className='MyAwesomeParallax'
-            parallaxData={parallax.skills}
-          >
-            {skills.map((item, index) => {
-              return (
+          {skills.map((item, index) => {
+            return (
+              <Plx
+                className='MyAwesomeParallax'
+                parallaxData={parallax.skills}
+              >
                 <div key={index}>
                   <Progress
                     strokeColor={item.strokeColor}
@@ -62,9 +62,9 @@ const Skills = inject('store')(observer(props => {
                   />
                   <p>{item.title}</p>
                 </div>
-              )
-            })}
-          </Plx>
+              </Plx>
+            )
+          })}
         </Col>
       </Row>
     </Layout>

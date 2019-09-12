@@ -1,23 +1,54 @@
 export const skills = [
   {
     start: 'self',
-    startOffset: 0,
-    duration: 500,
-    easing: [0.25, 0.1, 0.6, 1.5],
+    duration: '25vh',
     properties: [
       {
-        startValue: 90,
+        startValue: -15,
         endValue: 0,
-        property: 'rotate',
+        unit: 'vh',
+        property: 'translateX',
       },
       {
         startValue: 0,
         endValue: 1,
-        property: 'scale',
+        property: 'opacity',
+      },
+    ],
+  },
+  {
+    start: 'self',
+    startOffset: '30vh',
+    duration: '40vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 0,
+        unit: 'vh',
+        property: 'translateX',
+      }
+    ],
+  },
+  {
+    start: 'self',
+    startOffset: '80vh',
+    duration: '25vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 15,
+        unit: 'vh',
+        property: 'translateX',
+      },
+      {
+        startValue: 1,
+        endValue: 0,
+        property: 'opacity',
       },
     ],
   },
 ];
+
 export const experience = [
   {
     start: 'self',
