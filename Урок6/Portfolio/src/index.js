@@ -6,6 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'mobx-react';
 import Store from './mobxStore'
 
- const AppTheme = new Store();
+const AppTheme = new Store();
 ReactDOM.render(<Provider store={AppTheme}><App /></Provider>, document.getElementById('root'));
 serviceWorker.unregister();

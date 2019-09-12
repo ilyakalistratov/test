@@ -20,4 +20,5 @@ const ViewWeather = (props) => {
     </Col>
   )
 }
+
 export default ViewWeather;

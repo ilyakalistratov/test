@@ -11,10 +11,12 @@ const AddTask = (props) => {
             value={props.itemValue}
             required
             placeholder='new task...'
-            onChange={props.addItemValue} />
+            onChange={props.addItemValue}
+          />
         </Form.Item>
       </Form>
     </div >
   )
 }
+
 export default AddTask;

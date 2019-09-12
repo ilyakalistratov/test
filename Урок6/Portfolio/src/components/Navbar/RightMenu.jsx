@@ -26,16 +26,18 @@ const RightMenu = inject("store")(observer((props) => {
     title: 'Контакты',
     href: '#Contacts'
   }]
+
   return (
-    <Menu style={{ backgroundColor: `${theme.secondSectionBackground}`, color: `${theme.colorParagraph}` }}>
+    <Menu style={{ backgroundColor: `#3a3a3a`, color: `${theme.colorParagraph}` }}>
       {menu.map((item, index) => {
         return (
           <Menu.Item key={index}>
-            <a href={item.href} >{item.title}</a>
+            <a href={item.href}>{item.title}</a>
           </Menu.Item>
         )
       })}
     </Menu>
   );
 }))
+
 export default RightMenu;

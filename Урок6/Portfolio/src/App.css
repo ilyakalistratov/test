@@ -1,5 +1,28 @@
 @import '~antd/dist/antd.css';
-
+.ant-drawer-wrapper-body {
+  background-color: #3a3a3a;
+}
+.ant-drawer-body {
+  background-color: #3a3a3a;
+}
+.ant-drawer-header {
+  background-color: #3a3a3a;
+}
+.ant-drawer-title {
+  color: #cecece;
+}
+.ant-drawer-close {
+  color: #cecece;
+}
+.ant-drawer-mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.ant-menu-item a {
+  color: #cecece;
+}
+.ant-menu-item-selected > a {
+  color: #333333;
+}
 .top_slide h1 {
   color: #000;
   font-size: 36px;

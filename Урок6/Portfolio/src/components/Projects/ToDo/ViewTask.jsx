@@ -13,9 +13,10 @@ class ViewTask extends React.PureComponent {
                 <Button
                   type="primary"
                   style={{ marginRight: 10 }}
-                  onClick={removeTask(item.id)}>
+                  onClick={removeTask(item.id)}
+                >
                   -
-              </Button>
+                </Button>
                 <List.Item.Meta
                   description={item.text}
                 />
@@ -35,4 +36,5 @@ class ViewTask extends React.PureComponent {
     )
   }
 }
+
 export default ViewTask;

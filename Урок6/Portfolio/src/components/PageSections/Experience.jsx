@@ -1,6 +1,8 @@
 import React from 'react';
 import { Layout, Row, Col, Timeline } from 'antd';
 import { observer, inject } from 'mobx-react';
+import Plx from 'react-plx';
+import * as parallax from '../../animation/parallaxData ';
 
 const Experience = inject('store')(observer(props => {
   const { theme } = props.store;
@@ -17,6 +19,7 @@ const Experience = inject('store')(observer(props => {
     title: 'Dexsys IT.',
     description: 'Курсы по фронтенд разработке от компании Dexsys IT 2019 год'
   },]
+
   return (
     <Layout id='Experience' style={{ backgroundColor: `${theme.firstSectionBackground}`, color: `${theme.colorParagraph}` }}>
       <Row>
@@ -26,20 +29,26 @@ const Experience = inject('store')(observer(props => {
       </Row>
       <Row type="flex" justify="center" gutter={48} style={{ margin: '20px 0 30px 0' }}>
         <Col xs={{ span: 22 }} sm={{ span: 22 }} md={{ span: 24 }} lg={{ span: 10 }}>
-          <Timeline
-            mode="alternate"
-            style={{ color: `${theme.colorParagraph}` }}>
-            {experience.map((item, index) => {
-              return (
-                <Timeline.Item key={index}>
-                  <b>{item.title}</b> {item.description}
-                </Timeline.Item>
-              )
-            })}
-          </Timeline>
+          <Plx
+            className='StickyText-trigger'
+            parallaxData={parallax.experience}
+          >
+            <Timeline
+              mode="alternate"
+              style={{ color: `${theme.colorParagraph}` }}>
+              {experience.map((item, index) => {
+                return (
+                  <Timeline.Item key={index}>
+                    <b>{item.title}</b> {item.description}
+                  </Timeline.Item>
+                )
+              })}
+            </Timeline>
+          </Plx>
         </Col>
       </Row>
     </Layout>
   )
 }))
+
 export default Experience;

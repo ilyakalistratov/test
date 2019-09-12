@@ -3,7 +3,7 @@ import { Layout, Row, Col } from 'antd';
 import { observer, inject } from 'mobx-react';
 
 const AboutMe = inject("store")(observer((props => {
-  const { theme } = props.store
+  const { theme } = props.store;
   return (
     <Layout id='About_me' style={{ background: `${theme.secondSectionBackground}`, color: `${theme.colorParagraph}` }}>
       <Row>
@@ -24,4 +24,5 @@ const AboutMe = inject("store")(observer((props => {
     </Layout>
   )
 })))
+
 export default AboutMe;

@@ -17,9 +17,11 @@ class ConvertContainer extends React.Component {
     super(props);
     this.state = { sum: '', currency: 'r' }
   }
+
   handleRubleChange = (e) => {
     this.setState({ sum: e.target.value, currency: 'r' })
   }
+
   handleDollarChange = (e) => {
     this.setState({ sum: e.target.value, currency: 'd' })
   }
@@ -28,13 +30,19 @@ class ConvertContainer extends React.Component {
     const { currency, sum } = this.state;
     const rubble = currency === 'r' ? sum : convert(sum, 'r');
     const dollar = currency === 'd' ? sum : convert(sum, 'd');
+
     return (
       <div style={{ marginBottom: '30px' }}>
         <h2><i>Currency converter (конвертер валют)</i></h2>
-        <ConvertToRuble rubble={rubble} handleRubleChange={this.handleRubleChange} />
-        <ConvertToDollar dollar={dollar} handleDollarChange={this.handleDollarChange} />
+        <ConvertToRuble
+          rubble={rubble}
+          handleRubleChange={this.handleRubleChange} />
+        <ConvertToDollar
+          dollar={dollar}
+          handleDollarChange={this.handleDollarChange} />
       </div>
     )
   }
 }
+
 export default ConvertContainer;

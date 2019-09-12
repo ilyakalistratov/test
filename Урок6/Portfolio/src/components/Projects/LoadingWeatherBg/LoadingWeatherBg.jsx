@@ -66,11 +66,13 @@ class LoadingWeatherBg extends React.Component {
         <Row type="flex" style={{ background: `url(${this.state.url}) no-repeat`, backgroundSize: 'cover' }}>
           {this.state.loading ? <Col><Loading /></Col> :
             <Col>
-              <ViewWeather weatherdata={this.state.weatherdata} />
+              <ViewWeather weatherdata={this.state.weatherdata}
+              />
             </Col>}
         </Row>
       </div>
     )
   }
 }
+
 export default LoadingWeatherBg;

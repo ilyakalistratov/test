@@ -15,4 +15,5 @@ const WithCardWrapper = (Component) => {
   }
   return NewComponent;
 }
+
 export default WithCardWrapper;

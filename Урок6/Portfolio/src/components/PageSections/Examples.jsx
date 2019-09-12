@@ -43,4 +43,5 @@ const Examples = inject('store')(observer(props => {
     </Layout>
   )
 }))
+
 export default Examples;

@@ -7,12 +7,11 @@ import Skills from './components/PageSections/Skills';
 import Experience from './components/PageSections/Experience';
 import Examples from './components/PageSections/Examples';
 import Contacts from './components/PageSections/Contacts';
-import DevTools from 'mobx-react-devtools';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
-   <>  
-   <DevTools />
+    <ParallaxProvider>
       <HeaderBlock />
       <AboutMe />
       <Practice />
@@ -20,7 +19,7 @@ function App() {
       <Experience />
       <Examples />
       <Contacts />     
-   </>
+    </ParallaxProvider>
   );
 }
 export default App;

@@ -21,6 +21,7 @@ const HeaderBlock = inject('store')(observer(props => {
     description: 'jQuery, React, Redux'
   }]
   const bgImg = theme.disabled ? bgDark : bg;
+
   return (
     <div id='header_container' style={{ backgroundColor: `${theme.firstSectionBackground}`, color: `${theme.colorHeader}` }}>
       <Header style={{
@@ -58,4 +59,5 @@ const HeaderBlock = inject('store')(observer(props => {
     </div >
   )
 }))
+
 export default HeaderBlock;

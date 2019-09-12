@@ -8,10 +8,12 @@ class TaskContainer extends React.PureComponent {
     super(props);
     this.state = { tasks: [], item: '' }
   }
+
   addItemValue = (e) => {
     let val = e.target.value;
     this.setState({ item: val });
   }
+
   addTask = (e) => {
     e.preventDefault();
     let { tasks } = this.state;
@@ -21,6 +23,7 @@ class TaskContainer extends React.PureComponent {
       item: ''
     });
   }
+
   removeTask = (id) => (e) => {
     e.preventDefault();
     let { tasks } = this.state;
@@ -38,9 +41,11 @@ class TaskContainer extends React.PureComponent {
           addTask={this.addTask} />
         <ViewTask
           tasks={this.state.tasks}
-          removeTask={this.removeTask} />
+          removeTask={this.removeTask}
+        />
       </div>
     )
   }
 }
+
 export default TaskContainer;

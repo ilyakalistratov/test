@@ -6,9 +6,14 @@ const ConvertToDollar = (props) => {
   return (
     <Form>
       <Form.Item label='Enter dollar amount:'>
-        <Input type="text" placeholder='' value={dollar} onChange={handleDollarChange} />
+        <Input
+          type="text"
+          placeholder=''
+          value={dollar}
+          onChange={handleDollarChange} />
       </Form.Item>
     </Form>
   )
 }
+
 export default ConvertToDollar;

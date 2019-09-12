@@ -3,16 +3,18 @@ import { List, Avatar, Button, Skeleton } from 'antd';
 
 const ViewNews = (props) => {
   const { list, onLoadMore } = props;
-  const loadMore = (<div
-    style={{
-      textAlign: 'center',
-      marginTop: 12,
-      height: 32,
-      lineHeight: '32px',
-    }}
-  >
-    <Button onClick={onLoadMore}>show more</Button>
-  </div>)
+  const loadMore = (
+    <div
+      style={{
+        textAlign: 'center',
+        marginTop: 12,
+        height: 32,
+        lineHeight: '32px',
+      }}
+    >
+      <Button onClick={onLoadMore}>show more</Button>
+    </div>)
+
   return (
     <List
       loadMore={loadMore}
@@ -29,6 +31,8 @@ const ViewNews = (props) => {
         </List.Item>
 
       )}
-    />)
+    />
+  )
 }
+
 export default ViewNews;

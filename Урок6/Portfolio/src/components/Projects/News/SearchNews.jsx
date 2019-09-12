@@ -6,9 +6,14 @@ const SearchNews = (props) => {
   return (
     <Form onSubmit={onhandleSearch}>
       <Form.Item>
-        <Input value={value} onChange={onhandleInput} placeholder='search...' />
+        <Input
+          value={value}
+          onChange={onhandleInput}
+          placeholder='search...'
+        />
       </Form.Item>
     </Form>
   )
 }
+
 export default SearchNews;

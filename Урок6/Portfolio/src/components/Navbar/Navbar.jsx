@@ -8,28 +8,32 @@ import { observer, inject } from 'mobx-react';
   state = {
     visible: false
   }
+
   showDrawer = () => {
     this.setState({
       visible: true,
     });
   };
+
   onClose = () => {
     this.setState({
       visible: false,
     });
   };
+
   handleChangeTheme = (disabled) => {
     this.props.store.changeTheme(disabled)
   }
+
   render() {
     const { theme } = this.props.store
     return (
       <nav className='navbar'>
         <Row type="flex" justify="space-between" align='middle'>
-          <Col xl={{ span: 21, offset: 2 }} className="logo ">
-            <a style={{ fontSize: '18px', color: `${theme.colorHeader}` }} href="" >ILYA KALISTRATOV</a>
+          <Col sm={{ span: 20, offset: 1 }} className="logo ">
+            <a style={{ fontSize: '18px', color: `${theme.colorHeader}` }} href="">ILYA KALISTRATOV</a>
           </Col>
-          <Col xl={{ span: 1 }} className="navigation1">
+          <Col className="navigation1">
             <Icon
               className="menu_icon"
               type="menu"
@@ -40,7 +44,7 @@ import { observer, inject } from 'mobx-react';
               placement="right"
               onClose={this.onClose}
               visible={this.state.visible}
-              bodyStyle={{ backgroundColor: `${theme.secondSectionBackground}`, color: `${theme.colorHeader}` }}
+              bodyStyle={{ backgroundColor: `#3a3a3a`, color: `${theme.colorHeader}` }}
             >
               <RightMenu />
             </Drawer>
@@ -57,4 +61,5 @@ import { observer, inject } from 'mobx-react';
     );
   }
 }
+
 export default Navbar;

@@ -48,14 +48,22 @@ class NewsContainer extends React.Component {
   }
 
   render() {
-    const { list } = this.state
+    const { list } = this.state;
     return (
       <div>
         <h2><i>News</i></h2>
-        <SearchNews value={this.state.serachQuery} onhandleInput={this.onhandleInput} onhandleSearch={this.onhandleSearch} />
-        <ViewNews list={list} onLoadMore={this.onLoadMore} />
+        <SearchNews
+          value={this.state.serachQuery}
+          onhandleInput={this.onhandleInput}
+          onhandleSearch={this.onhandleSearch}
+        />
+        <ViewNews
+          list={list}
+          onLoadMore={this.onLoadMore}
+        />
       </div>
     )
   }
 }
+
 export default NewsContainer;

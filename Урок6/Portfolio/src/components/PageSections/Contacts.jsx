@@ -18,4 +18,5 @@ const Contacts = () => {
     </Layout >
   )
 }
+
 export default Contacts;
