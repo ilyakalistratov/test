@@ -31,8 +31,8 @@ export const skills = [
   },
   {
     start: 'self',
-    startOffset: '80vh',
-    duration: '25vh',
+    startOffset: '90vh',
+    duration: '15vh',
     properties: [
       {
         startValue: 0,

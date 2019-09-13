@@ -5,11 +5,11 @@ class Store {
     firstSectionBackground: '#f2f2f2',
     secondSectionBackground: '#ffffff',
     colorHeader: '#000000',
-    colorParagraph: '#939598',
+    colorParagraph: '#666666',
     disabled: false
   }
 
-  changeTheme(disabled) {    
+  changeTheme(disabled) {
     this.theme.disabled = disabled
     if (this.theme.disabled) {
       this.theme.firstSectionBackground = '#222222';
@@ -20,13 +20,13 @@ class Store {
       this.theme.firstSectionBackground = '#f2f2f2';
       this.theme.secondSectionBackground = '#ffffff';
       this.theme.colorHeader = '#000000';
-      this.theme.colorParagraph = '#939598';
-    }    
-  }  
+      this.theme.colorParagraph = '#666666';
+    }
+  }
 }
 
-decorate (Store, {
+decorate(Store, {
   theme: observable,
-  changeTheme: action,  
+  changeTheme: action,
 })
- export default Store;
+export default Store;
