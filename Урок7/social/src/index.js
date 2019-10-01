@@ -10,10 +10,12 @@ import makeInspectable from 'mobx-devtools-mst';
 
 
 const store = TaskStore.create({})
+
 makeInspectable(store);
 onPatch(store, patch => {
   console.log(patch)
 })
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

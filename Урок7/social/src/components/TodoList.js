@@ -1,26 +1,17 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import Form from './Form';
 
-const TodoList = ({ todo }) => {
+const TodoList = (props) => {
+  const onRemove = id => e => {
+    e.preventDefault();
+    props.store.remove(id)
+  }
   return (
     <div className="card" >
       <div className="card-body">
-        <h4 className="card-title">{todo.name}</h4>
-        <div>
-          {todo.details}
-        </div>
+        <button className='btn__todo' onClick={onRemove(props.todo.id)}>-</button>
+        <span className="card-title"> {props.todo.name}</span>
       </div>
-      <div className="status" >
-        {todo.status()}
-      </div>
-      {!todo.is_done &&
-        <button
-          className="btn btn-info mb-2"
-          onClick={todo.markDone}
-        >
-          Done
-         </button>}
     </div>
   )
 }

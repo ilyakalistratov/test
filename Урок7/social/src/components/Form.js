@@ -1,22 +1,23 @@
 import React from 'react';
+import { uniqueId } from 'lodash'
 
 export default class Form extends React.Component {
+  onAddtask = e => {
+    e.preventDefault();
+    this.props.store.add({
+      name: this.nameInput.value,
+      id: uniqueId(),
+    });
+    e.target.reset();
+    this.nameInput.focus();
+  }
 
   render() {
     return (
       <form
-        onSubmit={e => {
-          e.preventDefault();
-          this.props.store.add({
-            name: this.nameInput.value,
-            details: this.detailsInput.value,
-          });
-          e.target.reset();
-          this.nameInput.focus();
-        }}>
+        onSubmit={this.onAddtask}>
         <label htmlFor="name">
-          Name
-            <input
+          <input
             required
             className="input"
             type="text"
@@ -24,21 +25,11 @@ export default class Form extends React.Component {
             id="name"
           />
         </label>
-        <label htmlFor="details">
-          Details
-                     <input
-            required
-            className="input"
-            type="text"
-            ref={input => (this.detailsInput = input)}
-            id="details"
-          />
-        </label>
         <button
           className="btn btn-info mb-2"
           type="submit">
           Add
-                 </button>
+          </button>
       </form>
     );
   }
