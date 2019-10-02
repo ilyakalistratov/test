@@ -7,6 +7,7 @@ export default class Form extends React.Component {
     this.props.store.add({
       name: this.nameInput.value,
       id: uniqueId(),
+      active: 'active'
     });
     e.target.reset();
     this.nameInput.focus();
