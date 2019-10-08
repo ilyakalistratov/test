@@ -15,8 +15,8 @@ const TodoList = (props) => {
     <div className="card" >
       <div className="card-body">
         <button className='btn__todo' onClick={onRemove(props.todo.id)}>-</button>
-        {(props.todo.active === 'active') ? <span className="card-title" onClick={onFinished(props.todo.id)}>{props.todo.name}</span> :
-          <s><span className="card-title" onClick={onFinished(props.todo.id)}>{props.todo.name}</span></s>}
+        {(props.todo.active === 'active') ? <span className="card-title" onClick={onFinished(props.todo.id)}> {props.todo.name}</span> :
+          <s><span className="card-title" onClick={onFinished(props.todo.id)}> {props.todo.name}</span></s>}
       </div>
     </div>
   )
