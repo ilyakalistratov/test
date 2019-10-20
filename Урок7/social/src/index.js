@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import './index.css';
-import App from './containers/App';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
-import TaskStore from './models/TaskStore';
+import {store} from './store';
 import { onPatch } from 'mobx-state-tree';
 import makeInspectable from 'mobx-devtools-mst';
 
 
-const store = TaskStore.create({})
 
 makeInspectable(store);
 onPatch(store, patch => {

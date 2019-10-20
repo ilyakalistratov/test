@@ -1,7 +1,8 @@
 import React from 'react';
-import { uniqueId } from 'lodash'
+import { uniqueId } from 'lodash';
+import { observer } from 'mobx-react';
 
-export default class Form extends React.Component {
+class Form extends React.Component {
   onAddtask = e => {
     e.preventDefault();
     this.props.store.add({
@@ -35,3 +36,4 @@ export default class Form extends React.Component {
     );
   }
 }
+export default observer(Form)
