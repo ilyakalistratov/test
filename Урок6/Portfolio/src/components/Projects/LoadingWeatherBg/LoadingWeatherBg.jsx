@@ -13,7 +13,7 @@ class LoadingWeatherBg extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      bgUrl: 'https://static.wixstatic.com/media/632d61_b320d16fef074274b7700f95d68ab6ee~mv2_d_6016_4016_s_4_2.jpg?dn=',
+      bgUrl: 'https://i.ibb.co/mTpwxjw/1122.jpg',
       url: '',
       latitude: '',
       longitude: '',

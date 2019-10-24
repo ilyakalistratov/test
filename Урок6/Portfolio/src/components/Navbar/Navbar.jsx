@@ -3,6 +3,16 @@ import RightMenu from './RightMenu'
 import { Drawer, Icon, Row, Col, Switch } from 'antd';
 import { observer, inject } from 'mobx-react';
 
+const SunSvg = () => {
+  <svg>
+    <path d="M19,1 Q21,0,23,1 L39,10 Q41.5,11,42,14 L42,36 Q41.5,39,39,40 L23,49 Q21,50,19,49 L3,40 Q0.5,39,0,36 L0,14 Q0.5,11,3,10 L19,1"></path>
+    <circle cx="21" cy="25" r="8"></circle>
+    <circle cx="21" cy="25" r="12">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 21 25" to="360 21 25" dur="3.5s" repeatCount="indefinite"></animateTransform>
+    </circle>
+  </svg>
+}
+
 @inject("store")
 @observer class Navbar extends Component {
   state = {
@@ -26,7 +36,7 @@ import { observer, inject } from 'mobx-react';
   }
 
   render() {
-    const { theme } = this.props.store
+    const { theme } = this.props.store;
     return (
       <nav className='navbar'>
         <Row type="flex" justify="space-between" align='middle'>
@@ -50,6 +60,8 @@ import { observer, inject } from 'mobx-react';
             </Drawer>
             <Switch
               size="small"
+              checkedChildren={<Icon type='sun' />}
+              unCheckedChildren={<Icon type="close" />}
               style={{ marginLeft: 10 }}
               checked={theme.disabled}
               onChange={this.handleChangeTheme}

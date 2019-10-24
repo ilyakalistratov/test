@@ -11,10 +11,10 @@ const Experience = inject('store')(observer(props => {
     description: 'Первое знакомство с HTML, CSS. Знакомство с CMS Joomla и WordPress 2014 год'
   }, {
     title: 'JavaScript.',
-    description: 'Изучение JavaScript в онлайн школе Hexlet 2018 год'
+    description: 'Изучил язык программирования JavaScript в онлайн школе Hexlet 2018 год'
   }, {
     title: 'HTML, CSS.',
-    description: 'ИзучениеHTML, CSS, SVG, LESS в онлайн школе HTML Academy 2019 год'
+    description: 'Изучил HTML, CSS, SVG, LESS в онлайн школе HTML Academy 2019 год'
   }, {
     title: 'Dexsys IT.',
     description: 'Курсы по фронтенд разработке от компании Dexsys IT 2019 год'
