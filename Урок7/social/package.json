@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^5.5.0",
     "antd": "^3.24.2",
+    "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "mobx": "^5.13.1",
     "mobx-devtools": "^0.9.21",

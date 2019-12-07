@@ -1,0 +1,23 @@
+.header  {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-gap: 10px;
+}
+.menu {
+    display: none;
+}
+
+@media screen and ( max-width: 700px) {
+    .tel {
+        display:none;
+    }
+    .menu {
+        display: block;
+    }
+}
