@@ -1,11 +1,17 @@
 const graphql = require('graphql');
 
-const {GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID} = graphql;
+const {GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID, GraphQLInt} = graphql;
 
 const movies = [
-    {id:'1', name: 'StarWars', genre: 'wars'},
-    {id: 2, name: 'Airport', genre: 'triller'},
-    {id: 3, name: 'Terminator', genre: 'crime'},
+    {id: '1', name: 'StarWars', genre: 'wars', direcorId: '1'},
+    {id: 2, name: 'Recetir', genre: 'triller', direcorId: '2'},
+    {id: 3, name: 'Terminator', genre: 'crime', direcorId: '3'},
+];
+
+const directors = [
+    {id: '1', name: 'Lucas Film', age: 50},
+    {id: 2, name: 'Quentin Tarantino', age: 47},
+    {id: 3, name: 'James McTeigue', age: 55},
 ];
 
 const MovieType = new GraphQLObjectType({
@@ -14,6 +20,21 @@ const MovieType = new GraphQLObjectType({
         id: {type: GraphQLID},
         name: {type: GraphQLString},
         genre: {type: GraphQLString},
+        director: {
+            type: DirectorType,
+            resolve (parent, args) {
+                return directors.find(item => item.id == parent.id)
+            }
+        }
+    }),
+});
+
+const DirectorType = new GraphQLObjectType({
+    name: 'Director',
+    fields: () => ({
+        id: {type: GraphQLID},
+        name: {type: GraphQLString},
+        age: {type: GraphQLInt},
     }),
 });
 
@@ -26,6 +47,13 @@ const Query = new GraphQLObjectType({
             resolve(parent, args) {
                 return movies.find(movie => movie.id == args.id);
             }
+        },
+        direcor: {
+            type: DirectorType,
+            args: {id: {type: GraphQLID}},
+            resolve(parent, args) {
+                return directors.find(item => item.id == args.id)
+            }
         }
     }
 });
@@ -33,3 +61,17 @@ const Query = new GraphQLObjectType({
 module.exports = new GraphQLSchema({
     query: Query,
 });
+
+/*
+query($id: ID) {
+  movie(id: $id) {
+  id
+  name
+  genre
+    director {
+      name
+      age
+    }
+  }
+}
+ */
