@@ -54,8 +54,9 @@ const Skills = inject('store')(observer(props => {
               <Plx
                 className='MyAwesomeParallax'
                 parallaxData={parallax.skills}
+                key={index}
               >
-                <div key={index}>
+                <div >
                   <Progress
                     strokeColor={item.strokeColor}
                     percent={item.percent}

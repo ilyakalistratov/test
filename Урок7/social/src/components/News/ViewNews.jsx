@@ -1,5 +1,6 @@
 import React from 'react';
 import { List, Avatar, Button, Skeleton } from 'antd';
+import { observer } from 'mobx-react';
 
 const ViewNews = (props) => {
   const { list, onLoadMore } = props;
@@ -14,7 +15,7 @@ const ViewNews = (props) => {
     >
       <Button onClick={onLoadMore}>show more</Button>
     </div>)
-
+console.log("!!!!!", list)
   return (
     <List
       loadMore={loadMore}
@@ -26,7 +27,7 @@ const ViewNews = (props) => {
               <Avatar src='' />
             }
             title={<a href={item.story_url} target="_blank">{item.story_title}</a>}
-            description={`${item.points} points | ${item.num_comments} comments | ${new Date(item.created_at).toLocaleDateString('en-GB')} | ${item.author}`}
+            description={`comments | ${new Date(item.created_at).toLocaleDateString('en-GB')} | ${item.author}`}
           />
         </List.Item>
 

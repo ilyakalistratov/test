@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input } from 'antd';
+import { observer } from 'mobx-react';
 
 const SearchNews = (props) => {
   const { value, onhandleInput, onhandleSearch } = props
@@ -16,4 +17,4 @@ const SearchNews = (props) => {
   )
 }
 
-export default SearchNews;
+export default observer(SearchNews);
